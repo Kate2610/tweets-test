@@ -1,0 +1,32 @@
+.userListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+}
+
+.userList {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  
+}
+
+
+.loadMoreButton {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color:#5CD3A8;
+    color: #373737;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.loadMoreButton:hover {
+    background-color: #44b991;
+}
+
