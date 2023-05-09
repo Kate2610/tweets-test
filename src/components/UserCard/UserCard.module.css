@@ -8,15 +8,34 @@
     background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
     box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
     border-radius: 20px;
+    position: relative;
+}
+
+.ellipse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .avatar {
-    width: 80px;
-    height: 80px;
-   
-    background: #EBD8FF;
-    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), inset 0px -2.19582px 4.39163px #AE7BE3, inset 0px 4.39163px 3.29372px #FBF8FF;
-    border-radius: 13.1749px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+      
+    transform: translate(-50%, -50%);
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);;
+    
 }
 
 .user-info {
@@ -31,6 +50,7 @@
     line-height: 24px;
     text-transform: uppercase;
     color: #EBD8FF;
+    margin: 0;
    
 }
 
@@ -62,6 +82,8 @@ button {
     transition: background-color 0.2s ease;
     font-weight: 600;
     font-size: 18px;
+    margin-bottom: 26px;
+    margin-top: 16px;
 }
 
 button:hover {
@@ -78,3 +100,36 @@ button.follow:hover {
     background-color: rgba(235, 216, 255, 0.8);
 }
 
+.user-card-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.logo {
+   
+   position: absolute;
+    left: 20px;
+    top: 20px;
+    
+}
+
+.pictures {
+
+        width: 308px;
+        height: 168px;
+        left: 36px;
+        top: 28px;
+   
+}
+
+.user-card {
+    display: flex;
+}
+
+p {
+    margin-top: 18px;
+    margin-bottom: 0
+}

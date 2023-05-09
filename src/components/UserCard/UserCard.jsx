@@ -1,5 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import styles from './UserCard.module.css';
+import logo from '../../images/logo.png';
+import pictures from '../../images/pictures.png';
+import line from '../../images/line.png';
+import ellips from '../../images/ellipse.png';
+import boy from '../../images/boy.png';
 
 function UserCard({ user, onFollowersChange }) {
   const [following, setFollowing] = useState(() => {
@@ -35,9 +40,20 @@ function UserCard({ user, onFollowersChange }) {
 
   return (
     <div className={styles['user-card']}>
-      <img className={styles.avatar} src={user.avatar} alt="avatar" />
-      <div className={styles['user-info']}>
+      <img src={logo} alt="logo" className={styles.logo} />
+      <div className={styles['user-card-container']}>
+        <img src={pictures} alt="pictures" className={styles.pictures} />
+        <h3>{user.name}</h3>
+      </div>
+      <div className={styles['user-avatar-container']}>
+        <div className={styles['avatar-line-container']}>
+          <img src={line} alt="line" className={styles.line} />
+          <img src={ellips} alt="ellips" className={styles.ellips} />
+        </div>
+        <img className={styles.avatar} img src={boy} alt="avatar" />
         
+      </div>
+      <div className={styles['user-info']}>
         <p>{user.tweets} tweets</p>
         <p>{followers.toLocaleString('en-US')} followers</p>
         <button className={following ? styles.following : styles.follow} onClick={handleFollowClick}>
