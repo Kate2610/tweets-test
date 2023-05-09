@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserList from './components/UserList/UserList';
+import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<UserList />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);

@@ -1,19 +1,20 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Tweets from './pages/Tweets';
-import Header from './components/Header/Header';
+import Header from './components/Header';
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tweets" element={<Tweets />} />
       </Routes>
-    </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
+
